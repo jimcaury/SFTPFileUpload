@@ -1,0 +1,16 @@
+c:\users\israr.ali.systems\documents\visual studio 2013\Projects\SFTPFileUpload\SFTPFileUpload\bin\Debug\SFTPFileUpload.exe.config
+c:\users\israr.ali.systems\documents\visual studio 2013\Projects\SFTPFileUpload\SFTPFileUpload\obj\Debug\SFTPFileUpload.csprojResolveAssemblyReference.cache
+c:\users\israr.ali.systems\documents\visual studio 2013\Projects\SFTPFileUpload\SFTPFileUpload\bin\Debug\SFTPFileUpload.exe
+c:\users\israr.ali.systems\documents\visual studio 2013\Projects\SFTPFileUpload\SFTPFileUpload\bin\Debug\SFTPFileUpload.pdb
+c:\users\israr.ali.systems\documents\visual studio 2013\Projects\SFTPFileUpload\SFTPFileUpload\bin\Debug\Renci.SshNet.dll
+c:\users\israr.ali.systems\documents\visual studio 2013\Projects\SFTPFileUpload\SFTPFileUpload\bin\Debug\Renci.SshNet.xml
+c:\users\israr.ali.systems\documents\visual studio 2013\Projects\SFTPFileUpload\SFTPFileUpload\obj\Debug\SFTPFileUpload.exe
+c:\users\israr.ali.systems\documents\visual studio 2013\Projects\SFTPFileUpload\SFTPFileUpload\obj\Debug\SFTPFileUpload.pdb
+F:\360Downloads\SFTPFileUpload\SFTPFileUpload\bin\Debug\SFTPFileUpload.exe.config
+F:\360Downloads\SFTPFileUpload\SFTPFileUpload\bin\Debug\SFTPFileUpload.exe
+F:\360Downloads\SFTPFileUpload\SFTPFileUpload\bin\Debug\SFTPFileUpload.pdb
+F:\360Downloads\SFTPFileUpload\SFTPFileUpload\bin\Debug\Renci.SshNet.xml
+F:\360Downloads\SFTPFileUpload\SFTPFileUpload\obj\Debug\SFTPFileUpload.csprojAssemblyReference.cache
+F:\360Downloads\SFTPFileUpload\SFTPFileUpload\obj\Debug\SFTPFileUpload.csproj.CopyComplete
+F:\360Downloads\SFTPFileUpload\SFTPFileUpload\obj\Debug\SFTPFileUpload.exe
+F:\360Downloads\SFTPFileUpload\SFTPFileUpload\obj\Debug\SFTPFileUpload.pdb

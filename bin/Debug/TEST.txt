@@ -1,0 +1,86 @@
+Private Sub psRefreshRackStatus()
+    Dim llData() As Long
+    
+    Dim lsFireReadAddr_Top As String
+    Dim lsFireReadAddr_Bottom As String
+    
+    Dim sAddr(3) As String
+    Dim ilp     As Integer
+    
+    Select Case gnAgingRackIndex
+    
+        Case AGING_RACK_INDEX_1
+            sAddr(1) = FIRE_READADDR_1_X
+            sAddr(2) = FIRE_READADDR_2_X
+            sAddr(3) = FIRE_READADDR_3_X
+            
+        Case AGING_RACK_INDEX_2
+            sAddr(1) = FIRE_READADDR_4_X
+            sAddr(2) = FIRE_READADDR_1_X
+            sAddr(3) = FIRE_READADDR_2_X
+        Case AGING_RACK_INDEX_3
+            sAddr(1) = FIRE_READADDR_3_X
+            sAddr(2) = FIRE_READADDR_4_X
+            sAddr(3) = Fire_readaddr_5_X
+        Case AGING_RACK_INDEX_4
+            sAddr(1) = Fire_readaddr_6_X
+            sAddr(2) = Fire_readaddr_5_X
+            sAddr(3) = Fire_readaddr_6_X
+
+            
+    End Select
+        
+    ReDim llData(FIRECHECKDEVICESIZE)
+    
+    Select Case gnAgingRackIndex
+        Case 1
+            For ilp = 1 To 3
+                If pfReadDeviceBlock(sAddr(ilp), FIRECHECKDEVICESIZE, llData(), CON1PLC_INDEX) = True Then
+                    Call psRackStatus(llData(), ilp)
+                Else
+                    Call psOutputLogFile(LOG_HEADER_DEV & "               б      !!!(pfRefreshRackStatus)", 7)
+                End If
+            Next
+        Case 2
+            For ilp = 1 To 1
+                If pfReadDeviceBlock(sAddr(ilp), FIRECHECKDEVICESIZE, llData(), CON1PLC_INDEX) = True Then
+                    Call psRackStatus(llData(), ilp)
+                Else
+                    Call psOutputLogFile(LOG_HEADER_DEV & "               б      !!!(pfRefreshRackStatus)", 7)
+                End If
+            Next
+            For ilp = 2 To 3
+                If pfReadDeviceBlock(sAddr(ilp), FIRECHECKDEVICESIZE, llData(), CON2PLC_INDEX) = True Then
+                    Call psRackStatus(llData(), ilp - 1)
+                Else
+                    Call psOutputLogFile(LOG_HEADER_DEV & "               б      !!!(pfRefreshRackStatus)", 7)
+                End If
+            Next
+        Case 3
+            For ilp = 1 To 3
+                If pfReadDeviceBlock(sAddr(ilp), FIRECHECKDEVICESIZE, llData(), CON1PLC_INDEX) = True Then
+                    Call psRackStatus(llData(), ilp + 2)
+                Else
+                    Call psOutputLogFile(LOG_HEADER_DEV & "               б      !!!(pfRefreshRackStatus)", 7)
+                End If
+            Next
+            
+        Case 4
+            For ilp = 1 To 1
+                
+                If pfReadDeviceBlock(sAddr(ilp), FIRECHECKDEVICESIZE, llData(), CON1PLC_INDEX) = True Then
+                    Call psRackStatus(llData(), ilp + 5)
+                Else
+                    Call psOutputLogFile(LOG_HEADER_DEV & "               б      !!!(pfRefreshRackStatus)", 7)
+                End If
+            Next
+            For ilp = 2 To 3
+                If pfReadDeviceBlock(sAddr(ilp), FIRECHECKDEVICESIZE, llData(), CON2PLC_INDEX) = True Then
+                    Call psRackStatus(llData(), ilp)
+                Else
+                    Call psOutputLogFile(LOG_HEADER_DEV & "               б      !!!(pfRefreshRackStatus)", 7)
+                End If
+            Next
+    End Select
+    
+End Sub
