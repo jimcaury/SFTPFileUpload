@@ -13,6 +13,7 @@ namespace SFTPFileUpload
     {
         static void Main(string[] args)
         {
+            ///Test by zdw
             Console.WriteLine("Create client Object");
             using (SftpClient sftpClient = new SftpClient("127.0.0.1", 22, "test","test"))
             {
